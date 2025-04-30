@@ -1,3 +1,7 @@
+console.log("✅ script.js загружен");
+console.log("window.Telegram:", window.Telegram);
+console.log("window.Telegram.WebApp:", window.Telegram?.WebApp);
+
 const tg = window.Telegram.WebApp;
 tg.expand();
 
