@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Авторизация</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Добро пожаловать</h2>
+    <div class="tabs">
+      <button id="loginTab" class="active">Вход</button>
+      <button id="registerTab">Регистрация</button>
+    </div>
+
+    <div id="loginForm" class="form">
+      <input type="email" id="login_email" placeholder="Email" required />
+      <input type="password" id="login_password" placeholder="Пароль" required />
+      <button onclick="submitLogin()">Войти</button>
+    </div>
+
+    <div id="registerForm" class="form hidden">
+      <input type="text" id="reg_first_name" placeholder="Имя" required />
+      <input type="text" id="reg_last_name" placeholder="Фамилия" required />
+      <input type="email" id="reg_email" placeholder="Email" required />
+      <input type="password" id="reg_password" placeholder="Пароль" required />
+      <input type="password" id="reg_confirm" placeholder="Повторите пароль" required />
+      <input type="text" id="reg_position" placeholder="Должность" required />
+      <button onclick="submitRegister()">Зарегистрироваться</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
