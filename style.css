@@ -1,3 +1,64 @@
+/* 1. Центрируем контейнер по вертикали и горизонтали и задаём фон */
+body {
+  margin: 0;
+  padding: 0;
+  /* flex-контейнер, чтобы центрировать всё содержимое */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  /* тут можно выбрать любой “крутой” фон — либо картинку, либо градиент */
+  /* пример с градиентом: */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* пример с картинкой (раскомментируй и подставь свой URL):
+  background: url('https://example.com/your-cool-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  */
+}
+
+/* 2. Подправляем контейнер, чтобы он не растягивался слишком сильно */
+.container {
+  max-width: 400px;
+  width: 90%;
+  margin: 0;       /* flex-центрирование берёт на себя отступы */
+  background: rgba(255,255,255,0.9); /* чуть прозрачный фон, чтобы было видно фон страницы */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* 3. Центрируем сам заголовок и табы */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;  /* вкладки по центру */
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  max-width: 150px;
+  margin: 0 5px;            /* небольшой отступ между кнопками */
+  cursor: pointer;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 0;
+  transition: background .3s;
+}
+
+.tabs button.active {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Остальные стили форм оставляем без изменений */
+
 body {
   font-family: sans-serif;
   background-color: #f0f0f0;
